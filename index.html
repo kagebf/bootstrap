@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Учебный сайт о JavaScript: основы, примеры скриптов и интерактивные демонстрации.">
+  <title>Скрипты JavaScript</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Навигационная панель Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">JS Практикум</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">О JavaScript</a></li>
+          <li class="nav-item"><a class="nav-link" href="#topics">Темы</a></li>
+          <li class="nav-item"><a class="nav-link" href="#examples">Примеры</a></li>
+          <li class="nav-item"><a class="nav-link" href="#practice">Практика</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero py-5">
+    <div class="container py-lg-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge text-bg-warning mb-3">Учебный проект</span>
+          <h1 class="display-4 fw-bold">Скрипты JavaScript</h1>
+          <p class="lead mt-3">Язык, который делает веб-страницы интерактивными. Изучайте основы, смотрите примеры и проверяйте код прямо на сайте.</p>
+          <a class="btn btn-warning btn-lg mt-2" href="#topics">Начать изучение</a>
+          <button class="btn btn-outline-light btn-lg mt-2 ms-sm-2" data-bs-toggle="modal" data-bs-target="#infoModal">О проекте</button>
+        </div>
+        <div class="col-lg-5">
+          <div id="heroCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slide-card slide-one">
+                  <span class="slide-symbol">{ }</span><h3>Синтаксис</h3><p>Переменные, типы данных и операторы</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="slide-card slide-two">
+                  <span class="slide-symbol">ƒ()</span><h3>Функции</h3><p>Повторное использование кода</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="slide-card slide-three">
+                  <span class="slide-symbol">↔</span><h3>DOM и события</h3><p>Реакция страницы на действия пользователя</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Предыдущий</span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Следующий</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Знакомство</p>
+          <h2>Что такое JavaScript?</h2>
+          <p class="text-secondary">JavaScript — язык программирования, который позволяет добавлять на сайт динамику: обрабатывать нажатия, проверять формы, менять содержимое и работать с данными.</p>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-md-4"><div class="feature-card h-100"><div class="feature-icon">01</div><h3>Интерактивность</h3><p>Кнопки, меню, всплывающие сообщения и другие реакции на действия посетителя.</p></div></div>
+          <div class="col-md-4"><div class="feature-card h-100"><div class="feature-icon">02</div><h3>Логика</h3><p>Условия, циклы и функции помогают описывать поведение приложения.</p></div></div>
+          <div class="col-md-4"><div class="feature-card h-100"><div class="feature-icon">03</div><h3>Работа со страницей</h3><p>С помощью DOM можно находить HTML-элементы и изменять их содержимое и стили.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="topics" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Учебная программа</p>
+          <h2>Основные темы</h2>
+          <p class="text-secondary">Раскройте интересующую тему, чтобы прочитать краткое описание.</p>
+        </div>
+        <!-- Коллапс Bootstrap -->
+        <div class="accordion mt-4" id="topicsAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#topicOne" aria-expanded="true" aria-controls="topicOne">1. Переменные и типы данных</button></h3>
+            <div id="topicOne" class="accordion-collapse collapse show" data-bs-parent="#topicsAccordion"><div class="accordion-body">Для объявления переменных обычно используют <code>let</code> и <code>const</code>. Часто встречающиеся типы: <code>string</code> (строка), <code>number</code> (число), <code>boolean</code> (логическое значение), <code>object</code> (объект) и другие.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topicTwo" aria-expanded="false" aria-controls="topicTwo">2. Условия и циклы</button></h3>
+            <div id="topicTwo" class="accordion-collapse collapse" data-bs-parent="#topicsAccordion"><div class="accordion-body">Условные конструкции <code>if...else</code> позволяют выбирать действия в зависимости от условия. Циклы <code>for</code> и <code>while</code> повторяют блок кода, пока выполняется заданное условие.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topicThree" aria-expanded="false" aria-controls="topicThree">3. Функции и события</button></h3>
+            <div id="topicThree" class="accordion-collapse collapse" data-bs-parent="#topicsAccordion"><div class="accordion-body">Функция объединяет инструкции в отдельный блок. События, например <code>click</code> или <code>input</code>, позволяют выполнять код в ответ на действия пользователя.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topicFour" aria-expanded="false" aria-controls="topicFour">4. DOM и работа с HTML</button></h3>
+            <div id="topicFour" class="accordion-collapse collapse" data-bs-parent="#topicsAccordion"><div class="accordion-body">DOM представляет HTML-документ в виде дерева объектов. Метод <code>document.querySelector()</code> помогает найти элемент, а свойство <code>textContent</code> — изменить его текст.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Краткая справка</p>
+          <h2>Популярные конструкции JavaScript</h2>
+          <p class="text-secondary">Таблица показывает несколько базовых инструментов и их назначение.</p>
+        </div>
+        <!-- Таблица — обязательный элемент задания -->
+        <div class="table-responsive mt-4">
+          <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark"><tr><th scope="col">Конструкция</th><th scope="col">Назначение</th><th scope="col">Пример</th></tr></thead>
+            <tbody>
+              <tr><td><code>const</code></td><td>Объявление переменной, которую нельзя переназначить</td><td><code>const site = "JS";</code></td></tr>
+              <tr><td><code>if...else</code></td><td>Выполнение разных действий по условию</td><td><code>if (score &gt;= 60) { ... }</code></td></tr>
+              <tr><td><code>for</code></td><td>Повторение блока кода</td><td><code>for (let i = 0; i &lt; 3; i++)</code></td></tr>
+              <tr><td><code>function</code></td><td>Создание функции</td><td><code>function greet() { ... }</code></td></tr>
+              <tr><td><code>addEventListener()</code></td><td>Подписка на событие элемента</td><td><code>button.addEventListener("click", ...)</code></td></tr>
+              <tr><td><code>querySelector()</code></td><td>Поиск элемента на странице</td><td><code>document.querySelector("h1")</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code-panel mt-4">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"><span class="text-white fw-semibold">Пример скрипта</span><span class="badge text-bg-secondary">JavaScript</span></div>
+          <pre><code>const name = "Студент";
+function greet(user) {
+  return `Привет, ${user}!`;
+}
+console.log(greet(name));</code></pre>
+          <p class="mb-0 text-white-50 small">Этот код создаёт функцию приветствия и выводит результат в консоль браузера.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice" class="section-padding practice-section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <p class="eyebrow">Попробуйте сами</p>
+            <h2>Интерактивная практика</h2>
+            <p class="text-secondary">Введите имя и нажмите кнопку. Скрипт обработает введённые данные и покажет результат без перезагрузки страницы.</p>
+            <label for="nameInput" class="form-label fw-semibold">Ваше имя</label>
+            <input id="nameInput" class="form-control form-control-lg" type="text" placeholder="Например, Алексей" maxlength="40">
+            <button id="greetButton" class="btn btn-primary btn-lg mt-3">Выполнить скрипт</button>
+            <div id="greetResult" class="alert alert-primary mt-3 mb-0" role="status" aria-live="polite">Здесь появится результат.</div>
+          </div>
+          <div class="col-lg-7">
+            <div class="practice-card">
+              <h3>Проверка знаний</h3>
+              <p>Какой метод добавляет обработчик события элементу?</p>
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-secondary quiz-option" data-answer="wrong">querySelector()</button>
+                <button class="btn btn-outline-secondary quiz-option" data-answer="correct">addEventListener()</button>
+                <button class="btn btn-outline-secondary quiz-option" data-answer="wrong">textContent()</button>
+              </div>
+              <div id="quizResult" class="mt-3 fw-semibold" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span class="fw-semibold">JS Практикум</span>
+      <span class="text-white-50">Учебный сайт по теме «Скрипты JavaScript»</span>
+      <a class="link-warning" href="#home">Наверх ↑</a>
+    </div>
+  </footer>
+
+<!-- Модальное окно Bootstrap -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="infoModalLabel">О проекте</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p>Сайт создан как учебный проект на тему <strong>«Скрипты JavaScript»</strong> с использованием фреймворка Bootstrap 5.3.3.</p>
+
+          <p>Цель проекта — показать, как с помощью JavaScript можно делать веб-страницы интерактивными: обрабатывать действия пользователя, менять содержимое страницы без перезагрузки и проверять введённые данные.</p>
+
+          <h3 class="fs-6 fw-bold mt-4 mb-2">Что реализовано на странице</h3>
+          <ul>
+            <li>навигационная панель с адаптивным «бургер-меню»;</li>
+            <li>карусель со слайдами об основных темах JavaScript;</li>
+            <li>раскрывающийся аккордеон с учебной программой;</li>
+            <li>таблица с популярными конструкциями языка;</li>
+            <li>форма приветствия — обрабатывает имя и выводит результат;</li>
+            <li>мини-викторина с проверкой правильного ответа;</li>
+            <li>модальное окно, которое вы сейчас читаете.</li>
+          </ul>
+
+          <h3 class="fs-6 fw-bold mt-4 mb-2">Использованные технологии</h3>
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered align-middle mb-0">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">Технология</th>
+                  <th scope="col">Назначение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>HTML5</code></td><td>Структура страницы и семантические теги</td></tr>
+                <tr><td><code>CSS3</code></td><td>Оформление и собственные стили в <code>style.css</code></td></tr>
+                <tr><td><code>Bootstrap 5.3.3</code></td><td>Готовая сетка и компоненты: навбар, карусель, аккордеон, модалка</td></tr>
+                <tr><td><code>JavaScript</code></td><td>Обработка событий, работа с DOM, интерактивные скрипты</td></tr>
+                <tr><td><code>DOM API</code></td><td>Поиск элементов и изменение их содержимого</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-4">Проект свёрстан с использованием сетки Bootstrap и адаптирован под разные размеры экранов. Собственные стили вынесены в <code>css/style.css</code>, а скрипты — в <code>js/script.js</code>.</p>
+
+          <p class="mb-0">При проверке работы обратите внимание на интерактивные элементы в разделе <strong>«Практика»</strong>: форму приветствия и мини-викторину.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Понятно</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

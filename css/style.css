@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root { --ink: #182338; --muted: #667085; --accent: #ffc107; }
+* { scroll-margin-top: 78px; }
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); }
+.hero { background: radial-gradient(circle at 80% 15%, #3c5287 0, transparent 34%), linear-gradient(135deg, #101828, #172554 70%, #1d3557); color: white; }
+.hero .lead { max-width: 650px; color: #dce5f6; }
+.section-padding { padding: 5rem 0; }
+.section-heading { max-width: 760px; }
+.section-heading h2, .practice-section h2 { font-weight: 800; letter-spacing: -.035em; }
+.eyebrow { color: #7c3aed; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: .65rem; }
+.feature-card { border: 1px solid #e7eaf0; border-radius: 1.1rem; padding: 1.6rem; background: #fff; box-shadow: 0 12px 32px rgba(16,24,40,.04); }
+.feature-card h3 { font-size: 1.15rem; font-weight: 750; margin: 1rem 0 .6rem; }
+.feature-card p { color: var(--muted); margin-bottom: 0; }
+.feature-icon { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: .9rem; color: #fff; font-weight: 800; background: linear-gradient(135deg, #7c3aed, #2563eb); }
+.slide-card { min-height: 330px; padding: 2.5rem 2rem; display: flex; flex-direction: column; justify-content: end; color: #fff; background: linear-gradient(145deg, #7c3aed, #1d4ed8); }
+.slide-two { background: linear-gradient(145deg, #0f766e, #164e63); }
+.slide-three { background: linear-gradient(145deg, #b45309, #9f1239); }
+.slide-symbol { font-size: 4.5rem; line-height: 1; font-weight: 800; margin-bottom: auto; opacity: .9; }
+.slide-card h3 { font-size: 1.8rem; font-weight: 800; }
+.slide-card p { margin-bottom: 0; color: rgba(255,255,255,.8); }
+.accordion { --bs-accordion-border-radius: .8rem; --bs-accordion-inner-border-radius: .8rem; }
+.accordion-item { margin-bottom: .75rem; border: 1px solid #e5e7eb !important; border-radius: .8rem !important; overflow: hidden; }
+.accordion-button { font-weight: 700; padding: 1.2rem 1.25rem; }
+.table { border-radius: .75rem; overflow: hidden; }
+.table code { white-space: nowrap; color: #7c3aed; }
+.code-panel { padding: 1.5rem; background: #111827; border-radius: 1rem; overflow: hidden; }
+.code-panel pre { margin: 0 0 1rem; white-space: pre-wrap; color: #d1fae5; }
+.code-panel code { color: inherit; }
+.practice-section { background: #f8fafc; }
+.practice-card { background: #fff; padding: 2rem; border: 1px solid #e5e7eb; border-radius: 1.2rem; box-shadow: 0 15px 40px rgba(16,24,40,.06); }
+.practice-card h3 { font-weight: 800; margin-bottom: 1rem; }
+footer a { text-decoration: none; }
+@media (max-width: 767px) { .section-padding { padding: 3.5rem 0; } .slide-card { min-height: 260px; } .hero h1 { font-size: 2.7rem; } }
